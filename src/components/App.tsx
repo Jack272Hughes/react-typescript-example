@@ -17,6 +17,16 @@ function App() {
 						Stop Subscription
 					</button>
 				</div>
+
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "space-evenly",
+						width: "100%"
+					}}>
+					<p>Class Component Goes Here</p>
+					<p>Hooks goes here</p>
+				</div>
 			</header>
 		</div>
 	);
