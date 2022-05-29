@@ -5,6 +5,7 @@ import {
 	stopSubscription
 } from "../services/backendInterface";
 import "../styles/App.css";
+import ClassComponent from "./ClassComponent";
 
 function App() {
 	return (
@@ -25,7 +26,9 @@ function App() {
 						justifyContent: "space-evenly",
 						width: "100%"
 					}}>
-					<p>Class Component Goes Here</p>
+					<ClassComponent
+						message={"Hello there from class component!"}
+					/>
 					<Hooks message={"Hello there from hooks!"} />
 				</div>
 			</header>
