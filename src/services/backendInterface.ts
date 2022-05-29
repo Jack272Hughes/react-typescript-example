@@ -22,6 +22,11 @@ function subscribe(subscription: Subscription) {
 	subscriptions.push(subscription);
 }
 
+function unsubscribe(subscription: Subscription) {
+	const index = subscriptions.findIndex((func) => func === subscription);
+	if (index >= 0) subscriptions.splice(index, 1);
+}
+
 function updateSubscribers() {
 	const word: string = generateRandomString();
 	subscriptions.forEach((func) => func(word));
@@ -41,4 +46,4 @@ function stopSubscription(): void {
 	subscriptionActive = false;
 }
 
-export { request, subscribe, startSubscription, stopSubscription };
+export { request, subscribe, unsubscribe, startSubscription, stopSubscription };
