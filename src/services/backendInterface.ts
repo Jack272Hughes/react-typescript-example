@@ -18,7 +18,6 @@ type Subscription = (word: string) => void;
 
 const subscriptions: Subscription[] = [];
 function subscribe(subscription: Subscription) {
-	console.log("this was called");
 	subscriptions.push(subscription);
 }
 
