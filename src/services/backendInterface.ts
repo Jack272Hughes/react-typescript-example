@@ -10,7 +10,7 @@ function request(): Promise<String[]> {
 				stringArray.push(generateRandomString());
 			}
 			resolve(stringArray);
-		});
+		}, 500);
 	});
 }
 
