@@ -1,4 +1,5 @@
 import React from "react";
+import Hooks from "../components/Hooks";
 import {
 	startSubscription,
 	stopSubscription
@@ -25,7 +26,7 @@ function App() {
 						width: "100%"
 					}}>
 					<p>Class Component Goes Here</p>
-					<p>Hooks goes here</p>
+					<Hooks message={"Hello there from hooks!"} />
 				</div>
 			</header>
 		</div>
