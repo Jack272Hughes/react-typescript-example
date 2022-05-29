@@ -24,7 +24,7 @@ function Hooks(props: Props) {
 	}, []);
 
 	useEffect(() => {
-		setWord(word.replace(/[^a-zA-Z]/g, ""));
+		setWord(word.replace(/[^a-zA-Z0-9]/g, ""));
 	}, [word]);
 
 	return (

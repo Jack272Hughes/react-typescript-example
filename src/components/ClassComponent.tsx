@@ -36,7 +36,9 @@ class ClassComponent extends Component<Props, State> {
 
 	componentDidUpdate(prevProps: Props, prevState: State) {
 		if (prevState.word !== this.state.word) {
-			this.setState({ word: this.state.word.replace(/[^a-zA-Z]/g, "") });
+			this.setState({
+				word: this.state.word.replace(/[^a-zA-Z0-9]/g, "")
+			});
 		}
 	}
 
