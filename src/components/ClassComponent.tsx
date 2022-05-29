@@ -21,17 +21,13 @@ class ClassComponent extends Component<Props, State> {
 	}
 
 	addWord(word: string) {
-		this.setState((prevState) => {
-			return { items: [...prevState.items, word] };
-		});
+		this.setState({ items: [...this.state.items, word] });
 	}
 
 	componentDidMount() {
 		request().then((words) => {
-			this.setState((prevState) => {
-				return {
-					items: prevState.items.concat(words)
-				};
+			this.setState({
+				items: this.state.items.concat(words)
 			});
 		});
 
